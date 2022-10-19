@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Javascript</h1>
+
+    <p id="situacao"></p>
+
+    <script>
+        let n1 = parseFloat( prompt("Nota1:") );
+        let n2 = parseFloat( prompt("Nota2:") );
+
+        let media = (n1 + n2) / 2;
+
+        let situacao = "";
+        let cor = "";
+
+        if (media >= 6.0) {
+            situacao = "Aprovado";
+            cor = "blue";
+        } else {
+            if (media >= 2){
+                situacao = "Exame Final";
+                cor = "orange";
+            } else {
+                situacao = "Reprovado";
+                cor = "red";
+            }
+        }
+
+        document.getElementById("situacao").innerHTML = situacao;
+        document.getElementById("situacao").style.color = cor;
+        
+    </script>
+</body>
+</html>
