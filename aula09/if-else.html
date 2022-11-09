@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>If Else</title>
 </head>
+
 <body>
     <h1> If Else Else If</h1>
 
@@ -17,9 +19,9 @@
             alert('Ainda é de madrugada!!!');
         } else if (hora < 12 && hora >= 6) {
             alert('Bom dia!');
-           // poderia retirar hora>=6 porque se chegar aqui, com certeza o valor 
+            // poderia retirar hora>=6 porque se chegar aqui, com certeza o valor 
             // da variável hora será maior ou igual a 6
-        } else if (hora >= 12 && hora < 18) { 
+        } else if (hora >= 12 && hora < 18) {
             // poderia retirar hora>=12 porque se chegar aqui, com certeza o valor 
             // da variável hora será maior ou igual a 12
             alert('Boa tarde!');
@@ -27,8 +29,32 @@
             alert('Boa noite!');
         }
 
+        /* outra forma, sem o else if
+        */
+
+        if (hora < 6) {
+            alert('Ainda é de madrugada!!!');
+        } else {
+            if (hora < 12 && hora >= 6) {
+                alert('Bom dia!');
+                // poderia retirar hora>=6 porque se chegar aqui, com certeza o valor 
+                // da variável hora será maior ou igual a 6
+            } else {
+                if (hora >= 12 && hora < 18) {
+                    // poderia retirar hora>=12 porque se chegar aqui, com certeza o valor 
+                    // da variável hora será maior ou igual a 12
+                    alert('Boa tarde!');
+                } else {
+                    alert('Boa noite!');
+                }
+            }
+        }
+
+
+
 
     </script>
-    
+
 </body>
+
 </html>
